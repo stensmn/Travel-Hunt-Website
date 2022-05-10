@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Number In JavaScript</p>
+
+<button onclick="myFunction1()">Max No</button>
+<button onclick="myFunction2()">toString Method</button>
+<button onclick="myFunction3()">NaN</button>
+<button onclick="myFunction4()">infinity if exceeds max</button>
+
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+function myFunction1() {
+    var x = 99999999999999;// x will be x = 999999999999999
+	var y = 999999999999999;// y will be 10000000000000000
+	
+	document.getElementById("demo1").innerHTML = x + "<br>" + y + "<br>" + 0xFF;
+}
+function myFunction2() {
+    var myNumber = 128;
+	document.getElementById("demo2").innerHTML = "128 = " +
+	myNumber + " Decimal, " +
+	myNumber.toString(16) + " Hexadecimal, " +
+	myNumber.toString(8) + " Octal, " +
+	myNumber.toString(2) + " Binary."//128=128 Decimal,80 Hexadecimal,200 Octal, 10000000 Binary.
+
+}
+function myFunction3() {
+var NumStr=100 / "Apple";
+var NumNum=100 / "10";
+document.getElementById("demo3").innerHTML = NumStr + "<br>" + NumNum;// NaN
+
+
+}
+
+function myFunction4() {
+    var myNumber = 100;
+	var txt = "";
+	var x;
+	x= 2/0;
+	var y;
+	y = -2/0;
+	while (myNumber != Infinity) {
+	    myNumber = myNumber * myNumber;
+		txt = txt + myNumber + "<br>";
+	}
+	document.getElementById("demo4").innerHTML = txt + "<br>" + x + "<br>" + y;
+	
+	
+	
+}
+</script>
+	
+</body>
+</html>

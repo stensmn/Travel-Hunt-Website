@@ -1,0 +1,29 @@
+}
+
+.text-small{
+    font-size: 20px;
+}
+
+.secLeft{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin: auto;
+    flex-direction: row-reverse;
+}
+
+.paragraph{
+    padding: 0px 65px;
+}
+h1{
+    color: white;
+    text-decoration: underline;
+}
+.secRight{
+color: white;
+}
+.secLeft{
+    color: white;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>feedback</title>
+	<script>
+		function validate(){
+		var fname=document.reg_form.fname;
+		var lname=document.reg_form.lname;
+		var feedback=document.reg_form.feedback;
+		var gender=document.reg_form.gender;
+		var email=document.reg_form.email;
+		var mobile=document.reg_form.mobile;
+		var course=document.reg_form.review;
+		var letters=/^[A-Za-z]+$/;
+		var alnum=/^[0-9a-zA-Z]+$/;
+
+		if (!(fname.value.match(letters))) {
+			alert("Name should be alphabets");
+			fname.focus();
+			return false;
+		}
+		if (!(lname.value.match(letters))) {
+			alert("Name should be alphabets");
+			lname.focus();
+			return false;
+		}
+	
+		if (!(feedback.value.match(alnum))) {
+			alert("Feedback should be alpha numeric characters only");
+			feedback.focus();
+			return false;
+		}
+			if (gender.value.length<=0) {
+			alert("Gender is required");
+			gender.focus();
+			return false;
+		}
+		if (email.value.length<=0) {
+			alert("Email id is required");
+			email.focus();
+			return false;
+		}
+		if (mobile.value.length<=0 || mobile.value.length>=10) {
+			alert("Mobile number is required");
+			mobile.focus();
+			return false;
+		}
+		if (course.value=="select review") {
+			alert("Rewiew is required");
+			review.focus();
+			return false;
+		}
+		return false;
+
+		}
+	</script>
+</head>
+<style>
+	body{
+		margin: auto;
+		width: 50%;
+		border: 3px solid white;
+		padding: 30px;
+		color: white;
+		font-family: sans-serif;
+		font-weight: bold;
+		background-image: url('https://wallpapercave.com/wp/wp4103004.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+	}
+</style>
+<body>
+	<center><h2>Please provide Feedback to help us improve our services</h2></center>
+	<hr>
+	<form method="" action="" name="reg_form" onsubmit="return validate()">
+		<h1>FEEDBACK FORM</h1>
+		<table>
+			<tr>
+				<td><label>First name:</label></td>
+				<td><input type="text" name="fname" placeholder="First Name"></td>
+			</tr>
+			<tr>
+				<td><label>Last name:</label></td>
+				<td><input type="text" name="lname" placeholder="Last Name"></td>
+			</tr>
+			<tr>
+				<td><label>Feedback:</label></td>
+				<td><input type="textarea" size="50" name="feedback" placeholder="Feedback"></td>
+			</tr>
+			<tr>
+				<td><label>Gender:</label></td>
+				<td><input type="radio" name="gender" value="male">Male
+		            <input type="radio" name="gender" value="female">Female</td>
+		        </tr>
+		        <tr>
+		        	<td><label>Email id:</label></td>
+		        	<td><input type="text" name="email" placeholder="example@gmail.com"></td>
+		        </tr>
+		        <tr>
+		        	<td><label>Mobile:</label></td>
+		        	<td><input type="number" name="mobile"></td>
+		        </tr>
+		        <tr>
+		        	<td><label>Rating:</label></td>
+		        	<td><select name="review">
+		        		<option value="select rating">select rating</option>
+		        		<option value="Excellent">Excellent</option>
+		        		<option value="Good">Good</option>
+		        		<option value="Satisfactory">Satisfactory</option>
+		        		<option value="Average">Average</option>
+		        		</select>		     
+		        	</td>
+		        </tr>
+		        <tr>
+		        	<td>
+		        		<input type="submit" name="submit" value="submit">
+		        		<input type="reset" name="reset" value="reset">
+		        	</td>
+		        </tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title>Restaurants NearBy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css ">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+</style>
+</head>
+<head>
+<style>
+body {
+  margin: 0;
+  font-family: cursive,sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="Home">Home</a>
+  <a href="Restaurants.html">Restaurants</a>
+  <a href="review.html">Reviews</a>
+</div>
+</body>
+
+<style>
+body {
+  background-image: url('https://image.freepik.com/free-photo/abstract-blur-coffee-shop-cafe-interior_74190-6342.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+<body>
+
+<div class="w3-container">
+  <h2 style="color:white;"><b>Hungryy? Looking for Restaurants NearBy?<b/></h2>
+  <p style="color:white;"><b>Find the nearest place to Eat...<b/></p>
+</div>
+
+<div class="w3-content w3-section" style="max-width:300px">
+  <img class="mySlides w3-animate-top" src="https://static.toiimg.com/thumb/85647758.cms?width=1000&height=1000&imgsize=209392" style="width:100%">
+  <img class="mySlides w3-animate-top" src="https://media.discordapp.net/attachments/914800949955018765/914809658286415902/chad-montano-eeqbbemH9-c-unsplash.jpg?width=1000&height=1000" style="width:100%">
+  <img class="mySlides w3-animate-top" src="https://media.discordapp.net/attachments/914800949955018765/914815320605216778/istockphoto-972654870-612x612.jpg?width=1000&height=1000" style="width:100%">
+  <img class="mySlides w3-animate-top" src="https://media.discordapp.net/attachments/914800949955018765/914814948536905758/XPIko.png?width=1000&height=1000" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2500);
+}
+</script>
+</body>
+<body>
+
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Enter your Location.." name="search2">
+</form>
+
+</body>
+</html>
